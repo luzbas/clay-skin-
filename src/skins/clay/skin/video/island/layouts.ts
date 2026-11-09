@@ -108,8 +108,8 @@ const phone: IslandLayout = {
     { piece: 'antenna', x: -1.0, y: 8.2, s: 0.83, rot: -28 },
     { piece: 'antenna', x: 1.0, y: 8.2, s: 0.83, rot: 28 },
     // Behind the island, so the legs, stem and trunk sink into the grass.
-    { piece: 'tv-leg-long', x: -2.5, y: 0.68, s: 1.25 },
-    { piece: 'tv-leg-long', x: 2.5, y: 0.68, s: 1.25 },
+    { piece: 'tv-leg-long', x: -1.9, y: 0.68, s: 1.25 },
+    { piece: 'tv-leg-long', x: 1.9, y: 0.68, s: 1.25 },
     { piece: 'mushroom', x: -3.4, y: 0.65, s: 0.62 },
     { piece: 'tree', x: 3.3, y: 0.7, s: 0.8 },
     { piece: 'island-phone', x: 0, y: -0.9 },
