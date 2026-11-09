@@ -93,6 +93,14 @@
       drop-shadow(0 calc(var(--ci-u) * 0.14) calc(var(--ci-u) * 0.22) rgb(43 39 56 / 0.18));
   }
 
+  /* The clay pictures are big and their soft drop shadows are slow to paint (worst on phones). Without their own
+     compositor layers, every timeline/time update while playing repainted them too, dropping frames. On their own
+     layers they're painted once and only composited after that. The timeline rail changes every frame, so it gets a
+     layer as well, keeping its repaints small. */
+  .clay-island :is(.ci-piece, .ci-rail) {
+    will-change: transform;
+  }
+
   .clay-island .ci-spot {
     display: grid;
     place-items: center;
