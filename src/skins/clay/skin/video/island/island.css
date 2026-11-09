@@ -57,6 +57,33 @@
     z-index: 3;
   }
 
+  /* The timeline's hover preview (chapter name and time) pops up over the bottom of the picture, so the controls have
+     to sit above the video. The controls layer drops its own stacking context inline, so the clay pieces still sit
+     behind the video while the controls (in their usual order) come in front of it. */
+  .clay-island:not([data-fs]) .ci-controls {
+    z-index: auto;
+  }
+
+  .clay-island:not([data-fs]) .ci-spot {
+    z-index: 4;
+  }
+
+  /* The transport discs are round, but their spots are square: only the disc itself takes the pointer, so the corners
+     of the big play disc don't cover the middle of the timeline above it. */
+  .clay-island .ci-spot:is(.ci-spot--play, .ci-spot--back, .ci-spot--fwd) {
+    pointer-events: none;
+  }
+
+  .clay-island .ci-spot:is(.ci-spot--play, .ci-spot--back, .ci-spot--fwd) > .media-button {
+    pointer-events: auto;
+    border-radius: 50%;
+  }
+
+  /* Their clay artwork is drawn a little larger than the button; it shouldn't catch the pointer either. */
+  .clay-island .ci-spot:is(.ci-spot--play, .ci-spot--back, .ci-spot--fwd) > .media-button::before {
+    pointer-events: none;
+  }
+
   /* The TV is the whole player inline, so the video's captions stay where the browser puts them. In fullscreen they
      lift above the grass ledge while the controls show. */
   .clay-island:not([data-fs]) video {
