@@ -131,6 +131,12 @@
     background-image: var(--ca-disc-cream);
   }
 
+  /* Phone fullscreen: Cast and AirPlay share one spot on the tree, so show only the one this browser supports (or
+     neither, rather than an empty ball). */
+  .clay-island[data-mode='fs-phone'] :is(.ci-spot--cast, .ci-spot--airplay):not(:has(> :not([data-hidden]))) {
+    display: none;
+  }
+
   .clay-island .ci-spot--back > .media-button,
   .clay-island .ci-spot--fwd > .media-button {
     --clay-disc: var(--ca-disc-cream);

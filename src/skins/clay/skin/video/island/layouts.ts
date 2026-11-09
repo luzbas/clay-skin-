@@ -160,8 +160,10 @@ const fsDesktop: IslandLayout = {
 };
 
 /**
- * Phone fullscreen (landscape, no scrolling): every control is in a group — the mushroom holds sound and casting,
- * the tree the view options, the title cloud the way out of fullscreen, the little island the transport.
+ * Phone fullscreen (landscape, no scrolling): every control is in a group — the mushroom stem holds sound, the tree
+ * a 2 × 2 of view options and casting, the title cloud the way out of fullscreen, the little island the transport.
+ * Cast and AirPlay share the tree's fourth spot: browsers offer one or the other, and the one a browser can't use
+ * hides itself (see island.css).
  * The phone's own buttons set the volume, so there's no volume slider.
  */
 const fsPhone: IslandLayout = {
@@ -172,18 +174,18 @@ const fsPhone: IslandLayout = {
   screen: 'fill',
   items: [
     { piece: 'cloud-long', x: -4.7, y: 3.15 },
-    { piece: 'mushroom-tall', x: -7.55, y: 0.35 },
+    { piece: 'mushroom-stem', x: -7.55, y: 0.35 },
     { piece: 'tree-tall', x: 7.95, y: 0.75 },
     { piece: 'ledge', x: 0, y: -3.85 },
     { piece: 'mini-island', x: 0, y: -1.15, s: 1.25 },
     { spot: 'fullscreen', x: -6.7, y: 3.1, d: 1.16 },
     { spot: 'title', x: -3.75, y: 3.0, w: 3.6, h: 1.1 },
-    { spot: 'mute', x: -8.2, y: -1.75, d: 1.2 },
-    { spot: 'cast', x: -8.3, y: 0.4, d: 1.12 },
-    { spot: 'airplay', x: -6.85, y: 0.4, d: 1.12 },
-    { spot: 'captions', x: 7.2, y: 2.2, d: 1.16 },
-    { spot: 'settings', x: 8.7, y: 2.2, d: 1.16 },
-    { spot: 'pip', x: 7.95, y: 0.75, d: 1.16 },
+    { spot: 'mute', x: -8.2, y: -2.0, d: 1.2 },
+    { spot: 'captions', x: 7.2, y: 1.9, d: 1.16 },
+    { spot: 'settings', x: 8.7, y: 1.9, d: 1.16 },
+    { spot: 'pip', x: 7.2, y: 0.45, d: 1.16 },
+    { spot: 'cast', x: 8.7, y: 0.45, d: 1.16 },
+    { spot: 'airplay', x: 8.7, y: 0.45, d: 1.16 },
     { spot: 'rail', x: 0.3, y: -3.85, w: 13.6, h: 0.78 },
     { spot: 'back', x: -2.45, y: -0.05, d: 1.56 },
     { spot: 'play', x: 0, y: 0.2, d: 2.5 },

@@ -11,6 +11,7 @@ import island_phone from '../../assets/island/island-phone.webp';
 import ledge from '../../assets/island/ledge.webp';
 import mini_island from '../../assets/island/mini-island.webp';
 import mushroom from '../../assets/island/mushroom.webp';
+import mushroom_stem from '../../assets/island/mushroom-stem.webp';
 import mushroom_tall from '../../assets/island/mushroom-tall.webp';
 import tree from '../../assets/island/tree.webp';
 import tree_tall from '../../assets/island/tree-tall.webp';
@@ -30,6 +31,8 @@ export const SPRITES = {
   'ledge': { src: ledge, u0: -10.804, u1: 10.6778, v0: -1.2976, v1: 0.7405 },
   'mini-island': { src: mini_island, u0: -2.8837, u1: 2.8385, v0: -0.8367, v1: 0.3507 },
   'mushroom': { src: mushroom, u0: -1.8824, u1: 1.8366, v0: -3.0942, v1: 0.9877 },
+  // The tall mushroom's stem without its cap (cut from mushroom-tall), for the phone fullscreen layout.
+  'mushroom-stem': { src: mushroom_stem, u0: -1.4492, u1: 0.1446, v0: -3.7453, v1: -1.0118 },
   'mushroom-tall': { src: mushroom_tall, u0: -1.9293, u1: 1.885, v0: -3.7986, v1: 1.0883 },
   'tree': { src: tree, u0: -1.8191, u1: 1.795, v0: -3.6208, v1: 1.8766 },
   'tree-tall': { src: tree_tall, u0: -1.806, u1: 1.7536, v0: -4.4153, v1: 2.3502 },
