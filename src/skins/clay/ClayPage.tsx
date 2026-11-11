@@ -23,9 +23,14 @@ export default function ClayPage() {
           </VideoSkin>
         </VideoPlayer>
       </div>
-      <a className="source-link" href="https://github.com/luzbas/clay-skin-">
-        GitHub
-      </a>
+      <nav className="source-links" aria-label="More">
+        <a className="source-link" href="./duo/">
+          Duo
+        </a>
+        <a className="source-link" href="https://github.com/luzbas/clay-skin-">
+          GitHub
+        </a>
+      </nav>
     </div>
   );
 }
